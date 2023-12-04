@@ -17,8 +17,8 @@ class Television extends Electrodomestico{
         return this.cuatroK;
     }
 
-    precioTV(): number{
-        let precioBase = super.precioTV();
+    precio(): number{
+        let precioBase = super.precio();
 
         if (this.resolucion > 40){
         precioBase = precioBase + precioBase * 0.3;

@@ -1,9 +1,9 @@
 class Electrodomestico{
 
-    private precioBase: number;
-    private color: string;
-    private consumoEnergetico: string;
-    private peso: number;
+    precioBase: number;
+    color: string;
+    consumoEnergetico: string;
+    peso: number;
 
     constructor(precioBase: number = 100, color: string = "blanco", consumoEnergetico: string = "F", peso: number = 5){
 
@@ -37,41 +37,38 @@ class Electrodomestico{
         let letrasValidas = ["A", "B", "C", "D", "E", "F"];
     
         return letrasValidas.indexOf(letra.toUpperCase()) !== -1
-            ? letra.toUpperCase()
-            : this.consumoEnergetico;
+            ? letra.toUpperCase() : this.consumoEnergetico;
     }
     
     comprobarColor(color: string): string{
         let coloresValidos = ["blanco", "negro", "rojo", "azul", "gris"];
-        return coloresValidos.indexOf(color.toLowerCase()) !== -1
-            ? color.toLowerCase()
-            : this.color;
+        return coloresValidos.indexOf(color.toLowerCase()) !== -1 ? color.toLowerCase() : this.color;
     }
     
 
-    precioTV(): number{
+    precio(): number{
 
         let precio = this.precioBase;
 
         switch(this.consumoEnergetico){
 
             case 'A':
-                precio += 100;
+                precio = precio + 100;
                 break;
             case 'B':
-                precio += 80;
+                precio = precio + 80;
                 break;
             case 'C':
-                precio += 60;
+                precio = precio + 60;
                 break;
             case 'D':
-                precio += 50;
+                precio = precio + 50;
                 break;
             case 'E':
-                precio += 30;
+                precio = precio + 30;
                 break;
             case 'F':
-                precio += 10;
+                precio = precio + 10;
                 break;
             default:
                 break;
